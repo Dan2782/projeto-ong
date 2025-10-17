@@ -1,9 +1,9 @@
-# Projeto ONG Esperança Viva
+# Projeto ONG
 
 Projeto desenvolvido como parte da avaliação de HTML5 e estrutura semântica.
 
 ## 👩‍💻 Descrição
-O site apresenta informações sobre a ONG Esperança Viva, seus projetos sociais e um formulário de cadastro para voluntários e doadores.
+O site apresenta informações sobre a ONG, seus projetos sociais e um formulário de cadastro para voluntários e doadores.
 
 ## 🧱 Estrutura do Projeto
 - `index.html` — Página inicial com informações da ONG e contato.
