@@ -1,0 +1,269 @@
+:root {
+  /* 🎨 Paleta de cores */
+  --cor-primaria: #2F80ED;
+  --cor-secundaria: #27AE60;
+  --cor-neutra-1: #F2F2F2;
+  --cor-neutra-2: #BDBDBD;
+  --cor-neutra-3: #333333;
+  --cor-aviso: #EB5757;
+  --cor-sucesso: #6FCF97;
+  --cor-info: #56CCF2;
+
+  /* 🖋️ Tipografia (5 tamanhos) */
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 20px;
+  --font-xl: 28px;
+
+  /* 📏 Espaçamentos (modular) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+}
+
+/* Fontes padrão */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: var(--font-md);
+  color: var(--cor-neutra-3);
+  background-color: var(--cor-neutra-1);
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================
+   SISTEMA DE DESIGN - ONG Esperança Viva
+   ========================================================== */
+
+/* 🎨 Variáveis globais */
+:root {
+  /* Paleta de cores */
+  --cor-primaria: #2a9d8f;
+  --cor-secundaria: #264653;
+  --cor-destaque: #e9c46a;
+  --cor-neutra-clara: #f4f4f4;
+  --cor-neutra-media: #dddddd;
+  --cor-neutra-escura: #1a1a1a;
+  --cor-sucesso: #4caf50;
+  --cor-erro: #e63946;
+
+  /* Espaçamentos modulares */
+  --esp-1: 8px;
+  --esp-2: 16px;
+  --esp-3: 24px;
+  --esp-4: 32px;
+  --esp-5: 48px;
+  --esp-6: 64px;
+
+  /* Tipografia */
+  --fonte-principal: "Arial", sans-serif;
+  --fonte-secundaria: "Georgia", serif;
+}
+
+/* ==========================================================
+   ESTILOS GERAIS
+   ========================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  color: var(--cor-neutra-escura);
+  background-color: var(--cor-neutra-clara);
+  line-height: 1.6;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ==========================================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================================== */
+
+header {
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: var(--esp-3) var(--esp-2);
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: var(--esp-2);
+}
+
+/* Menu principal */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: var(--esp-3);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--cor-destaque);
+}
+
+/* Submenu dropdown */
+nav ul li {
+  position: relative;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--cor-secundaria);
+  list-style: none;
+  padding: var(--esp-1) 0;
+  border-radius: 6px;
+  min-width: 160px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  padding: var(--esp-1) var(--esp-2);
+}
+
+nav ul li ul li a {
+  color: white;
+  display: block;
+}
+
+nav ul li ul li a:hover {
+  background-color: var(--cor-primaria);
+}
+
+/* ==========================================================
+   CONTEÚDO PRINCIPAL
+   ========================================================== */
+
+main {
+  padding: var(--esp-4) var(--esp-3);
+  display: grid;
+  gap: var(--esp-4);
+}
+
+section {
+  background-color: white;
+  padding: var(--esp-3);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--cor-secundaria);
+  margin-bottom: var(--esp-2);
+  border-bottom: 3px solid var(--cor-primaria);
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: var(--cor-primaria);
+  margin-top: var(--esp-2);
+  margin-bottom: var(--esp-1);
+}
+
+ul {
+  margin-left: var(--esp-3);
+}
+
+p {
+  margin-bottom: var(--esp-2);
+  font-size: 1rem;
+}
+
+/* ==========================================================
+   RODAPÉ
+   ========================================================== */
+
+footer {
+  background-color: var(--cor-secundaria);
+  color: white;
+  padding: var(--esp-3);
+  text-align: center;
+}
+
+footer a {
+  color: var(--cor-destaque);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--cor-primaria);
+}
+
+/* ==========================================================
+   RESPONSIVIDADE (5 Breakpoints)
+   ========================================================== */
+
+@media (max-width: 1200px) {
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  nav ul {
+    flex-direction: column;
+    gap: var(--esp-1);
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: var(--esp-3);
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 0.95rem;
+  }
+  header h1 {
+    font-size: 1.6rem;
+  }
+  nav ul {
+    align-items: center;
+  }
+}
+
+@media (max-width: 400px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+}
